@@ -1,5 +1,6 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const msgGameOver = document.querySelector('.game-over')
 
 
 const jump = () => {
@@ -17,9 +18,9 @@ const loop = setInterval(()=> {
     //captura o bottom atual do mário e converte para int o "+" faz a convertion
     const marioHightJump = +window.getComputedStyle(mario).bottom.replace('px', '');
 
-   
-   if (pipePosition <= 120 && pipePosition > 0  && marioHightJump < 80){
     
+   if (pipePosition <= 120 && pipePosition > 0  && marioHightJump < 80){
+   
     pipe.style.animation = 'none';
     pipe.style.left= `${pipePosition}px`;
 
@@ -29,6 +30,9 @@ const loop = setInterval(()=> {
     mario.src = 'resorces/game-over.png'
     mario.style.width = '75px'
     mario.style.marginLeft = '50px'
+
+    msgGameOver.classList.remove('displayNone')
+    
 
     clearInterval(loop);
    } 
