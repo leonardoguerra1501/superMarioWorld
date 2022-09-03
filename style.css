@@ -17,15 +17,17 @@
     position: absolute;
     bottom: 0; 
     width: 80px;
-    /* animation: pipe-animation 2s infinite linear; */
+    animation: pipe-animation 1.5s infinite linear;
 }
 
 .mario{
     width: 150px;
     bottom: 0px;
     position: absolute;
-    animation: jump 500ms infinite ease-out;
+}
 
+.jump{
+    animation: jump 500ms ease-out;
 }
 
 @keyframes pipe-animation{
@@ -43,15 +45,15 @@
     }
 
     40% {
-        bottom: 180px;
+        bottom: 190px;
     }
 
     50% {
-        bottom: 180px;
+        bottom: 190px;
     }
 
     60%{
-        bottom: 180px;
+        bottom: 190px;
     }
 
     100% {
