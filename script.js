@@ -19,8 +19,18 @@ const loop = setInterval(()=> {
 
    
    if (pipePosition <= 120 && pipePosition > 0  && marioHightJump < 80){
+    
     pipe.style.animation = 'none';
     pipe.style.left= `${pipePosition}px`;
+
+    mario.style.animation = 'none';
+    mario.style.bottom = `${marioHightJump}px`
+
+    mario.src = 'resorces/game-over.png'
+    mario.style.width = '75px'
+    mario.style.marginLeft = '50px'
+
+    clearInterval(loop);
    }
 }, 10)
 
