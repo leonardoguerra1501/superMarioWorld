@@ -13,6 +13,11 @@
     overflow: hidden;
     background: linear-gradient(#87ceeb, #e0f6ff);
 }
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 15s infinite linear;
+}
 
 .pipe{
     position: absolute;
@@ -59,6 +64,18 @@
 
     100% {
         bottom: 0px;
+    }
+    
+}
+
+@keyframes clouds-animation {
+
+    from{
+        right: -550px;
+    }
+
+    to{
+        right: 100%;
     }
     
 }
